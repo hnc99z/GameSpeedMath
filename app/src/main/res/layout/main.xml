@@ -8,36 +8,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_best_start"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_weight="8"
             android:text="@string/best"
             android:textColor="@android:color/black"
             android:textSize="24dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_score_start"
+        <Button
+            android:id="@+id/btnShare"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:gravity="right"
-            android:text="@string/score"
-            android:textColor="@android:color/black"
-            android:textSize="24dp"
-            android:textStyle="bold" />
+            android:background="@drawable/icon_share"
+            android:textColor="#ffffff" />
+
+
     </LinearLayout>
 
     <ImageView
         android:layout_width="346dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/logo" />
 
     <Button
@@ -45,7 +46,8 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/play" />
+
 
 </LinearLayout>

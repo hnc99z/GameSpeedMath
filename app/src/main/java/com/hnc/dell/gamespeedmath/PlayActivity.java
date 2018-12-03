@@ -134,8 +134,11 @@ public class PlayActivity extends Activity implements View.OnClickListener, Runn
             number3 = answer;
             isCheck = true;
         } else {
-            if (number1 % 2 == 0) {
-                number3 = answer + 1;
+            if (100 < number3 && number3 < 1000 ) {
+                number3 = answer + 10;
+                isCheck = false;
+            }else if (1000 < number3 && number3 < 10000 ) {
+                number3 = answer + 100;
                 isCheck = false;
             } else {
                 number3 = answer - 1;
@@ -153,8 +156,11 @@ public class PlayActivity extends Activity implements View.OnClickListener, Runn
             number3 = answer;
             isCheck = true;
         } else {
-            if (number1 % 2 == 0) {
-                number3 = answer + 1;
+            if (100 < number3 && number3 < 1000 ) {
+                number3 = answer + 10;
+                isCheck = false;
+            }else if (1000 < number3 && number3 < 10000 ) {
+                number3 = answer + 100;
                 isCheck = false;
             } else {
                 number3 = answer - 1;
@@ -172,8 +178,11 @@ public class PlayActivity extends Activity implements View.OnClickListener, Runn
             number3 = answer;
             isCheck = true;
         } else {
-            if (number1 % 2 == 0) {
-                number3 = answer + 1;
+            if (100 < number3 && number3 < 1000 ) {
+                number3 = answer + 10;
+                isCheck = false;
+            }else if (1000 < number3 && number3 < 10000 ) {
+                number3 = answer + 100;
                 isCheck = false;
             } else {
                 number3 = answer - 1;

@@ -10,11 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.hnc.dell.gamespeedmath.Facebook.ShareActivity;
+
 public class MyActivity extends Activity implements View.OnClickListener {
         private Fragment playFragment;
         private TextView tvBest;
         private TextView tvScore;
         private Button btPlay;
+        private Button btnShare;
         private SharedPreferences pref;
         private int bestScore;
         private int score;
@@ -29,9 +32,10 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
         private void initView() {
             tvBest = (TextView) findViewById(R.id.tv_best_start);
-            tvScore = (TextView) findViewById(R.id.tv_score_start);
             btPlay = (Button) findViewById(R.id.bt_play);
             btPlay.setOnClickListener(this);
+            btnShare = (Button) findViewById(R.id.btnShare);
+            btnShare.setOnClickListener(this);
             playFragment = new PlayFragment();
 
         }
@@ -39,8 +43,6 @@ public class MyActivity extends Activity implements View.OnClickListener {
         @Override
         public void onStart() {
             super.onStart();
-            String strScore = getString(R.string.score, score);
-            tvScore.setText(strScore);
             pref = this.getSharedPreferences(PlayFragment.SCORE, Context.MODE_PRIVATE);
             bestScore = pref.getInt(PlayFragment.SCORE, 1);
             String strBest = getString(R.string.best, bestScore);
@@ -53,6 +55,12 @@ public class MyActivity extends Activity implements View.OnClickListener {
                 case R.id.bt_play:
                     Intent intent = new Intent(MyActivity.this, OptionGame.class);
                     startActivity(intent);
+                    break;
+                case R.id.btnShare:
+                    String ShareText = tvBest.getText().toString().substring(5);
+                    Intent intent1 = new Intent(MyActivity.this,ShareActivity.class);
+                    intent1.putExtra("SHARETEXT",ShareText);
+                    startActivity(intent1);
                     break;
                 default:
                     break;
