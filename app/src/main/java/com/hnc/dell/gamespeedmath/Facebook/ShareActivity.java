@@ -37,15 +37,17 @@ public class ShareActivity extends AppCompatActivity {
         runTimePermission();
         String title ="Speed Math";
         String linkShare = "http://bit.ly/mathspeedversion1";
+        String img = "https://www.fshare.vn/file/TBROV1AYTWT4";
         if (ShareDialog.canShow(ShareLinkContent.class)) {
-            shareLinkFB(title,linkShare);
+            shareLinkFB(title,linkShare,img);
         }
         finish();
     }
 
-    public  void shareLinkFB(String title, String linkShare) {
+    public  void shareLinkFB(String title, String linkShare, String imgThumnal) {
         content = new ShareLinkContent.Builder()
                 .setContentTitle(title).setQuote("Tôi đã chơi được "+bestScore+" điểm. Hãy thử xem bạn được bao nhiêu điểm?")
+                .setImageUrl(Uri.parse(imgThumnal))
                 .setContentUrl(Uri.parse(linkShare))
                 .setShareHashtag(new ShareHashtag.Builder()
                         .setHashtag("#SpeedMath \n#ByCongHieu")

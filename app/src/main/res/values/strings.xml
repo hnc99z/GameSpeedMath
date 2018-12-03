@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">SpeedMath</string>
-    <string name="best">BEST: %1$s</string>
-    <string name="score">SCORE: %1$s</string>
-    <string name="game_over">GAME OVER</string>
-    <string name="your_score" formated="false">YOUR SCORE: %1$s</string>
-    <string name="crazy_math">CRAZY MATH</string>
+    <string name="best">Điểm cao: %1$s</string>
+    <string name="score">Điểm của bạn: %1$s</string>
+    <string name="game_over">Trò chơi kết thúc</string>
+    <string name="your_score" formated="false">Điểm của bạn: %1$s</string>
     <string name="facebook_app_id">1457255197743584</string>
     <string name="fb_login_protocol_scheme">fb1457255197743584</string>
 </resources>
